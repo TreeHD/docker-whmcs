@@ -4,8 +4,7 @@ COPY nginx.conf /etc/nginx/
 
 RUN apk update \
     && apk upgrade \
-    && apk add --no-cache bash \
-    && adduser -D -H -u 1000 -s /bin/bash www-data
+    && apk add --no-cache bash 
 
 ARG PHP_UPSTREAM_CONTAINER=php-fpm
 ARG PHP_UPSTREAM_PORT=9000
